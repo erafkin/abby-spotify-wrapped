@@ -8,7 +8,7 @@ load_dotenv()
 scope = "user-library-read user-top-read"
 
 sp = spotipy.Spotify(auth_manager=SpotifyOAuth(scope=scope))
-file_prepend="./output/jessica_"
+file_prepend="./output/emma_"
 time_range = "long_term"
 
 got_all_artists = False
