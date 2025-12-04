@@ -20,6 +20,6 @@ SPOTIPY_REDIRECT_URI=<callback url>
 ```
 ### run
 ```bash
-python get_spotify_info.py <output_folder> [--term ]
+python get_spotify_info.py <output_folder> --term <short, medium, or long>
 ```
 then explore in `spotify_wrapped.ipynb`
