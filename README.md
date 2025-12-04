@@ -1,6 +1,6 @@
 # Abby's Spotify Wrapped
 
-Abby didn't like her spotify wrapped so this pings the API for a time-frame's (`short_term`, `medium_term`, `long_term`) worth of data and downloads to CSVs. There is a notebook to explore them.
+Abby didn't like her spotify wrapped so this pings the API for a time-frame's (`short_term`, `medium_term`, `long_term`) worth of data and downloads to CSVs. There is a notebook to explore them. Google says that short is around a month, medium is around 6 months, and long is more than a year, maybe multiple years.
 
 ## to run
 This project has been developed in Python 3.11.6
@@ -20,6 +20,6 @@ SPOTIPY_REDIRECT_URI=<callback url>
 ```
 ### run
 ```bash
-python get_spotify_info.py
+python get_spotify_info.py <output_folder> [--term ]
 ```
 then explore in `spotify_wrapped.ipynb`

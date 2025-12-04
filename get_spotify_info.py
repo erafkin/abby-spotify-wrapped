@@ -9,14 +9,6 @@ from enum import Enum, auto
 
 
 load_dotenv()
-class term(Enum):
-    SHORT = auto()
-    MEDIUM = auto()
-    LONG = auto()
-
-    # Optional: add a __str__ method to make help messages cleaner (show names instead of the full <Enum> object)
-    def __str__(self):
-        return self.name.lower()
 
 def main(output_folder, time_range):
     scope = "user-library-read user-top-read"
@@ -93,9 +85,8 @@ if __name__ == "__main__":
     # Positional argument (required)
     parser.add_argument("output_folder", type=str, help="output folder for data")
     parser.add_argument("--term", 
-                        type=term,                             # Converts input string to an Enum member
-                        choices=list(term),                    # Restricts choices to valid Enum members
-                        default=term.MEDIUM,
+                        choices=["short", "medium", "long"],                    # Restricts choices to valid Enum members
+                        default="medium",
                         help="'short', 'medium', or 'long' term data scrape")
 
     # 3. Parse the arguments from the command line
